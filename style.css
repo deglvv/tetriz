@@ -4,6 +4,7 @@
 
 body {
     animation: rainbowbg 60s infinite;
+    overflow: hidden;
 }
 
 #b0{
@@ -13,15 +14,11 @@ body {
     background: linear-gradient(0deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);;
 }
 .bc {
-    pointer-events: none;
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: #0005;
-    animation-duration: 12s;
-    animation-name: circl;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    animation: circl 12s ease-in-out 0s infinite;
 }
 #b2 {    height: 90%;    animation-delay: 0.5s;}
 #b3 {    height: 80%;    animation-delay: 1s;}
@@ -29,7 +26,32 @@ body {
 #b5 {    height: 64%;    animation-delay: 2s;}
 #b6 {    height: 58%;    animation-delay: 2.5s;}
 
+#spc{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+}
+#gm{
+    position: absolute;
+    background-color: rgba(132, 172, 216, 0.429);
+    aspect-ratio: 0.75;
+    border: 2px green;
 
+}
+@media (orientation: landscape){/*widther*/
+    #gm{
+        height: 90vh;
+        top:-45vh;
+        left: -32.5vh;
+    }
+}
+@media (orientation: portrait){/*higher*/
+    #gm{
+        width: 70vw;
+        left: -35vw;
+        top: -46.5vw;
+    }
+}
 
 @keyframes rainbowbg {
     0% {background-color: #07f;}
